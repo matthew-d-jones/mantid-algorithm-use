@@ -9,11 +9,9 @@ class AlgStatsTableModel(QAbstractTableModel):
         self.header = header
 
     def rowCount(self, parent):
-
         return len(self.mylist)
 
     def columnCount(self, parent):
-
         return len(self.mylist[0])
 
     def data(self, index, role):

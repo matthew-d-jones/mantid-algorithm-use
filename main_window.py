@@ -4,7 +4,7 @@ import urllib2
 from json_parser import json_parser
 
 
-header = ['Algorithm Name', 'Count', 'Run as child', 'Mantid Version']
+header = ['Algorithm Name', 'Use Count', 'Run as child', 'Mantid Version']
 
 
 class MainWindow(QWidget):
