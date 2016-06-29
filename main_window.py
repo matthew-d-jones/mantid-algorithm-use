@@ -34,12 +34,12 @@ class MainWindow(QWidget):
         page_number = 1
         more = True
         while more:
+            print "Collecting data from page " + str(page_number)
             resp = urllib2.urlopen("http://reports.mantidproject.org/api/feature?page="+str(page_number)+"&format=json")
             alg_records, more = json_parser(resp.read())
         
             for record in alg_records:
                 table_data.append(record.get_data_list())
             page_number += 1
-            print page_number
 
         return table_data
